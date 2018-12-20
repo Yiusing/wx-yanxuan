@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/profile/profile",
+    "pages/category/category",
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#51c8cc",
+    "navigationBarTitleText": "大柑严选",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "商城",
+        "iconPath": "/images/icons/home.png",
+        "selectedIconPath": "/images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/images/icons/category.png",
+        "selectedIconPath": "/images/icons/category-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/images/icons/cart.png",
+        "selectedIconPath": "/images/icons/cart-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人中心",
+        "iconPath": "/images/icons/profile.png",
+        "selectedIconPath": "/images/icons/profile-active.png"
+      }
+    ]
+  }
+}

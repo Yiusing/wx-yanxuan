@@ -1,0 +1,59 @@
+<view class="main">
+  <!-- 头部导航 -->
+  <view class="top-nav">
+    <view wx:for="{{topNav}}" wx:key="index" class="nav-item {{navIndex==index?'active':''}}" bindtap='goTo' data-index="{{index}}">{{item}}</view>
+  </view>
+  <!-- 头部搜索框 -->
+  <view class="search">
+    <view class="search-icon"></view>
+    <text>搜索商品</text>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="carousel" autoplay='4000' indicator-dots='true' indicator-color='#aaa5a4' indicator-active-color='#fff'>
+    <swiper-item wx:for="{{imgList}}" wx:key="index">
+      <image class="carousel-image" src="{{item}}" lazy-load='true'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 格子导航 -->
+  <view class="index-nav">
+    <view class="nav-items" wx:for="{{nav}}" wx:key="index">
+      <navigator class="nav-link" url="{{item.url}}">
+        <image src="{{item.img_url}}" lazy-load='true'></image>
+        <text class="nav-title">{{item.title}}</text>
+      </navigator>
+    </view>
+  </view>
+   <!-- 楼层推荐 -->
+  <view class="recomment" wx:for="{{recommend}}" wx:key="index">
+    <!-- banner图 -->
+    <image src="{{item.img_url}}" class="rec-banner" lazy-load='true'></image>
+    <!-- 商品列表 -->
+    <scroll-view class="pdu-list" scroll-x="true">
+      <view class="pdu-content" wx:for="{{item.product}}" wx:key="i" wx:for-item="elem" wx:for-index="i">
+        <view class="pdu-img-box">
+          <image class="pdu-img" src="{{elem.img_url}}" lazy-load='true'></image>
+        </view>
+        <view class="pdu-details">
+          <text class="ell">{{elem.title}}</text>
+          <view class="price">
+            <text class="dis-price">￥{{elem.dicountPrice==0?elem.price:elem.dicountPrice}}</text>
+            <text class="ori-price" wx:if="{{elem.dicountPrice!=0}}">￥{{elem.price}}</text>
+          </view>
+          <view class="discount" wx:if="{{elem.isSell==1}}">冬日特惠</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 底部 -->
+  <!-- 加载更多 -->
+  <view class="get-more" wx:if="{{!notMore}}">
+    <view class="circle">
+      <view class="mask"></view>
+      <view class="move"></view>
+    </view>
+    <view>{{loading.title}}</view>
+  </view>
+  <view class="bottom" wx:else>
+    ———— 更多内容,敬请期待 ————
+  </view>
+</view>

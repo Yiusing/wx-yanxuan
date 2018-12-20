@@ -1,0 +1,72 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/*截取过长字符串*/
+.ell{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* loading动画 */
+.get-more{
+  display: flex;
+  justify-content: center;
+  font-size:14px;
+  color:#6d6d6d;
+  padding:30rpx 0;
+  background:#f4f4f4;
+}
+.circle{
+  margin-right:10rpx;
+  width:40rpx;
+  height:40rpx;
+  background:red;
+  border-radius: 50%;
+  position: relative;
+  animation: rotateC .5s linear 0s infinite;
+}
+.mask{
+  background:#fff;
+  width:30rpx;
+  height:30rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  left:5rpx;
+  top:5rpx;
+}
+.move{
+  position:absolute;
+  background:#fff;
+  width:40rpx;
+  height:30rpx;
+  left:13rpx;
+  border-radius: 50%;
+}
+@keyframes rotateC{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.clearFix::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.hr{
+  background:#f7f7f7;
+  height:30rpx;
+  width:100%;
+}

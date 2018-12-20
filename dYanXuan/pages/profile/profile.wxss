@@ -1,0 +1,35 @@
+.main{
+  background:#fafafa;
+  font-size:14px;
+}
+.avatar{
+  height:100px;
+  width:100%;
+}
+.order{
+  width: 100%;
+}
+.order-link{
+  display: flex;
+  justify-content: space-between;
+  background:#fff;
+  padding:20rpx 20rpx;
+}
+.check-order{
+  color:#a0a0a0;
+  font-size:13px;
+}
+.order-status{
+  margin-top:4rpx;
+  background:#fff;
+  display: flex;
+  justify-content: space-around;
+  padding:13rpx 0;
+}
+.link-bar{
+  background:#fff;
+  padding:20rpx;
+}
+.link-bar~.link-bar{
+  margin-top:4rpx;
+}

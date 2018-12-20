@@ -1,0 +1,135 @@
+.hr{
+  background-color:#eee;
+  height:12rpx;
+}
+.carousel{
+  height:489rpx;
+  width:100%;
+}
+.carousel-image{
+  height:489rpx;
+  width:100%;
+}
+.index-nav{
+  width:100%;
+  height:150rpx;
+  padding:10rpx 0;
+  display: flex;
+}
+.nav-items{
+  box-sizing: border-box;
+  width:20%;
+  height:100%;
+}
+.nav-link{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.nav-items image{
+  width: 100rpx;
+  height:100rpx;
+  margin-bottom:10rpx;
+}
+.nav-items .nav-title{
+  font-size:14px;
+}
+.rec-banner{
+  width:100%;
+  height:400rpx;
+}
+.recomment{
+  width:100%;
+  white-space: nowrap;
+}
+.pdu-title{
+  
+}
+.pdu-list{
+  height:435rpx;
+}
+.pdu-content{
+  width:30%;
+  display: inline-block;
+  font-size:14px;
+  padding:30rpx;
+  padding-right:0;
+}
+.pdu-img{
+  width:233rpx;
+  height:233rpx;
+}
+.pdu-details{
+  display: flex;
+  flex-direction: column;
+  margin-top:15rpx;
+}
+.pdu-img-box{
+  background-color: #f4f4f4;
+}
+.price{
+  margin-top:6rpx;
+}
+.dis-price{
+  color:red;
+}
+.ori-price{
+  text-decoration: line-through;
+  margin-left:10rpx;
+}
+.discount{
+  margin-top:6rpx;
+  font-size:11px;
+  text-align: center;
+  color:red;
+  border:1px solid #e0b1b5;
+  width:115rpx;
+  height:33rpx;
+}
+.search{
+  font-size:14px;
+  text-align: center;
+  margin:20rpx auto;
+  width:95%;
+  border-radius: 30px;
+  height:85rpx;
+  background:#f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-icon{
+  margin-right:20rpx;
+  width:40rpx;
+  height:40rpx;
+  background-image: url("http://localhost:8080/images/icons/search.png");
+  background-size: 100%;
+}
+.top-nav{
+  display: flex;
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.top-nav .nav-item{
+  box-sizing: border-box;
+  height:70rpx;
+  text-align: center;
+  font-size: 14px;
+  font-weight:500;
+  line-height: 70rpx;
+}
+.top-nav .nav-item.active{
+  color:#63c9d1;
+  border-bottom:2px solid #63c9d1;
+}
+.bottom{
+  font-size:12px;
+  color:#6d6d6d;
+  text-align: center;
+  background:#f4f4f4;
+  height:110rpx;
+  padding-top:15rpx;
+}
