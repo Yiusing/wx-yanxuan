@@ -2,7 +2,7 @@
   <!-- 头像 -->
   <view class="avatar">
     <view class="avatar-box">
-      <image src="http://localhost:8080/images/icons/avatar.png"></image>
+      <image src="http://172.20.10.13:8080/images/icons/avatar.png"></image>
     </view>
   </view>
   <view class="hr"></view>
@@ -16,19 +16,19 @@
     <!-- 订单状态 -->
     <view class="order-status">
       <view class="order-item">
-        <image src="http://localhost:8080/images/icons/pay.png"></image>
+        <image src="http://172.20.10.13:8080/images/icons/pay.png"></image>
         <text>待支付</text>
       </view>
       <view class="order-item">
-        <image src="http://localhost:8080/images/icons/car.png" class="car"></image>
+        <image src="http://172.20.10.13:8080/images/icons/car.png" class="car"></image>
         <text>待发货</text>
       </view>
       <view class="order-item">
-        <image src="http://localhost:8080/images/icons/shouhuo.png"></image>
+        <image src="http://172.20.10.13:8080/images/icons/shouhuo.png"></image>
         <text>待收货</text>
       </view>
       <view class="order-item">
-        <image src="http://localhost:8080/images/icons/deal.png"></image>
+        <image src="http://172.20.10.13:8080/images/icons/deal.png"></image>
         <text>交易完成</text>
       </view>
     </view>
@@ -37,22 +37,22 @@
   <view>
     <!-- 我的团购 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/tuangou.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/tuangou.png"></image>
       <text>我的团购</text>
     </view>
     <!-- 我的优惠券 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/cupon.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/cupon.png"></image>
       <text>我的优惠券</text>
     </view>
     <!-- 签到有奖 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/qiandao.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/qiandao.png"></image>
       <text>签到有奖</text>
     </view>
     <!-- 邀请好友领券 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/invite.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/invite.png"></image>
       <text>邀请好友领券</text>
     </view>
   </view>
@@ -60,17 +60,17 @@
   <view>
     <!-- 地址管理 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/addr.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/addr.png"></image>
       <text>地址管理</text>
     </view>
     <!-- 我的足迹 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/foot.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/foot.png"></image>
       <text>我的足迹</text>
     </view>
     <!-- 联系客服 -->
     <view class="link-bar">
-      <image class="link-icon" src="http://localhost:8080/images/icons/kefu.png"></image>
+      <image class="link-icon" src="http://172.20.10.13:8080/images/icons/kefu.png"></image>
       <text>联系客服</text>
     </view>
   </view>

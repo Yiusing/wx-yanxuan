@@ -1,5 +1,5 @@
 <view class="main">
-  <view class="cart-items">
+  <view class="cart-items" wx:if="{{!isCartEmpty}}">
     <!-- 标题 -->
     <view class="headline">
       <view class="headline-title">
@@ -31,6 +31,7 @@
               <text class="dis-price">￥{{item.dicountPrice==0?item.price:item.dicountPrice}}</text>
               <text class="ori-price" wx:if="{{item.dicountPrice!=0}}">￥{{item.price}}</text>
             </view>
+            <view class="delete" bindtap='deletePdu' data-id="{{index}}">删除</view>
             <view class="add">
               <view class="reduce-btn {{item.count>1?'active':''}}" bindtap="reduceCount" data-id="{{index}}">-</view>
               <text class="count">{{item.count}}</text>
@@ -50,6 +51,12 @@
       </view>
     </view>
     <view class="hr"></view>
+  </view>
+  <view class="empty-cart" wx:else>
+    <view class="empty-img-box">
+      <image src="http://172.20.10.13:8080/images/icons/empty.png" class="empty-img"></image>
+    </view>
+    <text class="empty-title">购物车空空哦~</text>
   </view>
 </view>
 <view class="buy">

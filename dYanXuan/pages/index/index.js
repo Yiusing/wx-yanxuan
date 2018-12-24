@@ -33,7 +33,7 @@ Page({
   },
   getIndexImg(){
     wx.request({
-      url: 'http://localhost:8080/index',
+      url: 'http://172.20.10.13:8080/index',
       success:res=>{
         this.setData({
           imgList:res.data.imgList,
@@ -48,7 +48,7 @@ Page({
     var pno = that.data.pno + 1;
     var pageSize = that.data.pageSize;
     wx.request({
-      url: 'http://localhost:8080/getRecommend',
+      url: 'http://172.20.10.13:8080/getRecommend',
       data:{pno,pageSize},
       success:res=>{
         var data = res.data.data.recommend;
@@ -103,7 +103,7 @@ Page({
     var showCart = this.data.showCart;
     var pduDetails = this.data.pduDetails;
     wx.request({
-      url: 'http://localhost:8080/getPduDetails',
+      url: 'http://172.20.10.13:8080/getPduDetails',
       data:{pid},
       success:res=>{
         this.setData({

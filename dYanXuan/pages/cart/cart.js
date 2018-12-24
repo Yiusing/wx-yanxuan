@@ -14,7 +14,8 @@ Page({
     totalPrice:0,
     pduDetails:[],
     discount:0,
-    balancePrice:0
+    balancePrice:0,
+    isCartEmpty:true
   },
   selectPdu(e){
     let that = this;
@@ -133,6 +134,15 @@ Page({
     return rowPrice;
   },
   showCart(){
+    if (app.globalData.pduDetails.length>0){
+      this.setData({
+        isCartEmpty:false
+      })
+    }else{
+      this.setData({
+        isCartEmpty: true
+      })
+    }
     //根据全局变量保存的信息显示出用户已经添加的商品
     var currentPrice=0,price=0,disPrice=0,sum=0,disSum=0;
     var isSel = this.data.isSel;
@@ -171,6 +181,11 @@ Page({
     this.setData({
       balancePrice:sum
     })
+  },
+  deletePdu(e){
+    var id = e.target.dataset.id;
+    app.globalData.pduDetails.splice(id,1)
+    this.showCart()
   },
   /**
    * 生命周期函数--监听页面加载

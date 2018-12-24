@@ -31,7 +31,7 @@ Page({
   },
   getDetails(){
     wx.request({
-      url: 'http://localhost:8080/category',
+      url: 'http://172.20.10.13:8080/category',
       success:res=>{
         console.log(res.data)
         this.setData({
