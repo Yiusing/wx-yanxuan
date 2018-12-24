@@ -43,18 +43,20 @@
   width:100%;
   white-space: nowrap;
 }
-.pdu-title{
-  
-}
 .pdu-list{
   height:435rpx;
 }
 .pdu-content{
   width:30%;
+  height:100%;
   display: inline-block;
   font-size:14px;
-  padding:30rpx;
   padding-right:0;
+  position: relative;
+  border-left:20rpx solid #fff
+}
+.pdu-content:last-child{
+  border-right:20rpx solid #fff
 }
 .pdu-img{
   width:233rpx;
@@ -77,6 +79,8 @@
 .ori-price{
   text-decoration: line-through;
   margin-left:10rpx;
+  color:#6d6d6d;
+  font-size:13px;
 }
 .discount{
   margin-top:6rpx;
@@ -93,7 +97,7 @@
   margin:20rpx auto;
   width:95%;
   border-radius: 30px;
-  height:85rpx;
+  height:70rpx;
   background:#f7f7f7;
   display: flex;
   justify-content: center;
@@ -132,4 +136,102 @@
   background:#f4f4f4;
   height:110rpx;
   padding-top:15rpx;
+}
+.bottom-cart{
+  position:fixed;
+  bottom:0;
+  background:#fff;
+  width: 100%;
+  font-size:14px;
+  z-index: 3;
+  transition: transform .4s linear;
+}
+.title-row{
+  position: relative;
+  padding-left:200rpx;
+  padding-top:20rpx;
+}
+.title-row .pdu-img{
+  width:130rpx;
+  height:130rpx;
+  position:absolute;
+  left:20rpx;
+  top:-20rpx;
+  background:#fff;
+  border:1px solid #d5d5d5;
+}
+.title-row .pdu-disPrice{
+  color:#e63e42;
+  font-size:15px;
+}
+.title-row .pdu-price{
+  color:#6d6d6d;
+  margin-left:15rpx;
+  font-size:13px;
+  text-decoration: line-through;
+}
+.spec-row{
+  margin-top:70rpx;
+  padding-left:20rpx;
+  padding-top:20rpx;
+  margin-left:auto;
+  margin-right:auto;
+  display: flex;
+}
+.spec-row .spec-title{
+  width:15%;
+}
+.spec-row .spec-detail-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+
+}
+.spec-row .spec-detail{
+  color:#6d6d6d;
+  border: 1px solid #6d6d6d;
+  border-radius: 5px;
+  padding:8rpx;
+  margin-right:20rpx;
+  margin-bottom:10px;
+}
+.spec-row .spec-detail.active{
+  color:#e63e42;
+  border: 1px solid #e63e42;
+}
+.count-row{
+  border-top:1px solid #d5d5d5;
+  padding:20rpx 20rpx;
+  display: flex;
+  align-items: center;
+}
+.count-row .add{
+  margin-left:50rpx;
+}
+.cart-row{
+  border-top:1px solid #d5d5d5;
+  padding:20rpx 0;
+}
+.cart-row .cart-btn{
+  width:50%;
+  margin:0 auto;
+  border-radius: 5px;
+  color:#fff;
+  background:#51c8cc;
+  text-align: center;
+  padding:15rpx 0;
+}
+.coveMask{
+  width: 100%;
+  height: 100vh;
+  background:#000;
+  opacity: .2;
+  position: fixed;
+  top:0;
+  left:0;
+  display: none;
+  z-index: 2;
+}
+.coveMask.showMask{
+  display: block;
 }

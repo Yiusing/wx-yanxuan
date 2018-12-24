@@ -7,15 +7,26 @@ Page({
   data: {
     navItems:["为您推荐","冬季专区","爆品专区","新品专区","居家","鞋包配饰","服装","电器","饮食","文具"],
     navIndex:0,
-    res:[]
+    res:[],
+    SlideActive:""
   },
   tapJump(e){
     let that = this;
     var index = e.target.dataset.index;
+    if (index > that.data.navIndex) {
+      that.setData({
+        SlideActive: "activeUp"
+      })
+    } else {
+      that.setData({
+        SlideActive: "activeDn"
+      })
+    }
     that.setData({
-      navIndex:index,
+      navIndex:index
     })
- 
+     
+  
     
   },
   getDetails(){

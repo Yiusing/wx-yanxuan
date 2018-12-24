@@ -35,6 +35,12 @@
   float: right;
   padding:0 25rpx;
 }
+.category.activeUp{
+  animation: slideUp .15s ease;
+}
+.category.activeDn{
+  animation: slideDown .15s ease;
+}
 .category-banner{
   text-align: center;
   padding:20rpx 0;
@@ -71,4 +77,24 @@
 .category-headline-title{
   font-size:15px;
   font-weight:600;
+}
+@keyframes slideUp{
+  0%{
+   transform: translateY(-50%);
+   opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideDown{
+  0%{
+   transform: translateY(50%);
+   opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+   opacity: 1;
+  }
 }

@@ -35,7 +35,7 @@
   animation: rotateC .5s linear 0s infinite;
 }
 .mask{
-  background:#fff;
+  background:#f4f4f4;
   width:30rpx;
   height:30rpx;
   border-radius: 50%;
@@ -46,7 +46,7 @@
 }
 .move{
   position:absolute;
-  background:#fff;
+  background:#f4f4f4;
   width:40rpx;
   height:30rpx;
   left:13rpx;
@@ -69,4 +69,65 @@
   background:#f7f7f7;
   height:30rpx;
   width:100%;
+}
+
+/* 引入外部图标库 */
+@import "/font/icon.wxss";
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:60rpx;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.cart-icon{
+  position: absolute;
+  bottom:5rpx;
+  right:0;
+  background:#e63e42;
+  border-radius:50%;
+  color:#fff;
+  font-size:50rpx;
+  padding:5rpx;
+}
+
+/* 购物车加减数量 */
+ .add{
+  width:160rpx;
+  height:50rpx;
+  border-radius: 50rpx;
+  border:1px solid #d5d5d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+ .add .reduce-btn, .add .add-btn{
+  width:40rpx;
+  height:40rpx;
+  border-radius: 50%;
+  border:1px solid #d5d5d5;
+  text-align: center;
+  color:#d5d5d5;
+  font-size:17px;
+  line-height: 35rpx;
+}
+ .add .reduce-btn.active, .add .add-btn.active{
+  color:rgb(151, 151, 151);
+  border-color: rgb(151, 151, 151);
+}
+ .add .reduce-btn{
+  margin-left:5rpx;
+}
+ .add .add-btn{
+  margin-right:5rpx;
+}
+
+/* 底部购物车 */
+.bottom-cart{
+  transform: translateY(110%)
+}
+.bottom-cart.show{
+  transform: translateY(0);
 }

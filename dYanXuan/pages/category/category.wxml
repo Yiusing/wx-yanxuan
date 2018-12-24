@@ -2,11 +2,27 @@
   <view class="aside-nav" bindtap='tapJump'>
     <view class="nav-item {{navIndex==index?'active':''}}" wx:for="{{navItems}}" wx:key="index" data-index="{{index}}">{{item}}</view>
   </view>
-  <view class="category {{slide?'activeUp':''}}">
+  <!-- <view class="category">
     <view class="category-banner">
       <image src='{{res[navIndex].bannerImg}}' lazy-load='true'></image>
     </view>
     <view class="category-content" wx:for="{{res[navIndex].list}}" wx:key="index">
+      <view class="category-headline" wx:if="{{item.title}}">
+        <text class="category-headline-title">{{item.title}}</text>
+      </view>
+      <view class="category-items">
+        <view class="category-item" wx:for="{{item.iconList}}" wx:for-item="elem" wx:for-index="i" wx:key="i">
+          <image lazy-load='true'src="{{elem.icon}}"></image>
+          <text class="category-item-title">{{elem.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class="category {{navIndex==index?SlideActive:''}}" wx:for="{{res}}" wx:for-item="item1" wx:key="index" hidden='{{index!==navIndex}}'>
+    <view class="category-banner">
+      <image src='{{item1.bannerImg}}' lazy-load='true'></image>
+    </view>
+    <view class="category-content" wx:for="{{item1.list}}" wx:key="index">
       <view class="category-headline" wx:if="{{item.title}}">
         <text class="category-headline-title">{{item.title}}</text>
       </view>

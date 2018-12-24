@@ -1,2 +1,61 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="main">
+  <view class="cart-items">
+    <!-- 标题 -->
+    <view class="headline">
+      <view class="headline-title">
+        <view class="selectAll-box ">
+          <view class="select-icon" hidden='{{isAllSel}}'></view>
+          <icon type='success' color="#e63e42" size="20" hidden='{{!isAllSel}}'></icon>
+          <view class="mask" catchtap='selectPdu' data-currentindex="-1"></view>
+        </view>
+        <view class="headline-title-content">满99元包邮</view>
+      </view>
+      <view class="others">随单福利</view>
+    </view>
+    <!-- 购物车商品 -->
+    <block wx:for="{{pduDetails}}" wx:key="index">
+      <view class="cart-box">
+        <view class="cart-item">
+          <view class="select-box">
+            <view class="select-icon" hidden='{{isSel[index]}}'></view>
+            <icon type='success' color="#e63e42" size="18" hidden='{{!isSel[index]}}'></icon>
+            <view class="mask" catchtap='selectPdu' data-currentindex="{{index}}"></view>
+          </view>
+          <!-- 商品图片 -->
+          <image lazy-load='true' src="{{item.img_url}}" class="pdu-img"></image>
+          <!-- 商品信息 -->
+          <view class="pdu-detials">
+            <view class="pdu-title">{{item.title}}</view>
+            <view class="pdu-spec">{{item.spec.title}}：{{item.spec.details}}</view>
+            <view class="price">
+              <text class="dis-price">￥{{item.dicountPrice==0?item.price:item.dicountPrice}}</text>
+              <text class="ori-price" wx:if="{{item.dicountPrice!=0}}">￥{{item.price}}</text>
+            </view>
+            <view class="add">
+              <view class="reduce-btn {{item.count>1?'active':''}}" bindtap="reduceCount" data-id="{{index}}">-</view>
+              <text class="count">{{item.count}}</text>
+              <view class="add-btn active" bindtap="addCount" data-id="{{index}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- 总计 -->
+    <view class="cart-total">
+      <text class="cart-total-title">商品金额</text>
+      <view class="cart-total-price">
+        <text class="p-p">￥{{totalPrice}}</text>
+        <text class="p-save">已享优惠￥{{discount}}</text>
+        <text class="p-delivery">已享包邮</text>
+      </view>
+    </view>
+    <view class="hr"></view>
+  </view>
+</view>
+<view class="buy">
+  <view class="all-total">
+    <text class="all-p">总计: ￥{{balancePrice}}</text>
+    <text decode='true' class="all-d">免邮费&gt;</text>
+  </view>
+  <view class="buy-btn" bindtap='balance'>结算</view>
+</view>
